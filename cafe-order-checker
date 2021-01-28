@@ -1,0 +1,15 @@
+cafe-order-checker
+
+Given all three arrays, write a method to check that my service is first-come, first-served. All food should come out in the same order customers requested it.
+
+iterate across served orders, track index of takeout and dine in, if it doesn't match one of them return false
+
+a = to[0]
+b = di[0]
+for i in SO:
+	if a || b != []
+	if i in a:
+		a.pop(0)
+	elif i in b:
+		b.pop(0)
+	else return false
