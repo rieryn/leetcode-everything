@@ -1,2 +1,0 @@
-# leetcode-everything
- 100%
