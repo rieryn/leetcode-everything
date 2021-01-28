@@ -1,0 +1,36 @@
+Given a list of integers, find the highest product you can get from three of the integers.
+
+3prod
+
+naive: get every combination of 3 products (n^3)
+
+hash every prod of 2 elements, iterate against hashmap
+
+track highest product of 2, highest prod of 3, highest num and lowest negative num while iterating
+multiply against highest product of 2, if negative check with lowest neg, check for new highest prod of 2
+
+edge cases:
+overflow
+less than 3 elements
+
+def f(nums):
+	h_num = 1
+	neg_num = 0
+	h_prod2 = 1
+	h_prod3 = 1
+	for i in nums:
+		print(h_prod3)
+		if h_prod2*i > h_prod3:
+			h_prod3 = h_prod2*i
+		if i<0:
+			if neg_num*i *h_num > h_prod3:
+				h_prod3 = neg_num*i *h_num
+			if neg_num*i > h_prod2:
+				h_prod2 = neg_num*i
+			if i< neg_num:
+				neg_num = i
+		if i*h_num >h_prod2:
+		    h_prod2 = i*h_num
+		if i > h_num:
+			h_num = i
+	return h_prod3

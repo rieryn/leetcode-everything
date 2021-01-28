@@ -1,0 +1,29 @@
+trash all values outside of [1:n+1]
+looking for smallest int in [1:n] not in nums, if all in nums then return n+1
+normally you can just hashmap nums and check against ints [1:n]
+
+for each nums[i], store ocurrence at index (nums[i]-1) by adding n+1
+retrieve original numbers with nums[i]%(n+1)
+
+alternatives: mark it with a negative sign
+
+find the first index where n[i] does not have n+1 added
+
+n = len(nums)
+set = n+1
+
+#trash values
+for i in range(n):
+	if nums[i]<0 or nums[i]>=set:
+		nums[i]=0
+
+#store ocurrences
+for i in range(n):
+	if 0<nums[i]%set:
+		index = nums[i]%set-1
+		nums[index]+=set
+#check
+for i in range(n):
+	if nums[i]<=n:
+		return i+1
+return set

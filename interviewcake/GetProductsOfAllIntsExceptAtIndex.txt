@@ -1,0 +1,55 @@
+You have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
+You can't use division in your solution!
+
+iterate through, get product of elements in front of index, and elements behind index
+front will be like
+current*next
+
+back will be like, fprod in reverse
+
+edge case: single or empty list
+
+if len(nums)<=1:
+	print("error")
+
+
+def f(nums):
+    fprod = 1
+    bprod = 1
+    f = []
+    b = []
+    for i in range(len(nums)):
+        f.append(fprod)
+        fprod = fprod*nums[i]
+        print(f)
+    print(f)
+        #last element can be, should be skipped
+
+    for i in range(len(nums)-1, -1, -1):
+        b.append(bprod)
+        bprod = bprod*nums[i]
+    print(b)
+    final = []
+    for i in range(len(nums)):
+        final.append(f[i]*b[len(nums)-i-1])
+    print(final)
+    return f
+
+print(f([1,2,3]))
+#expect [6,3,2]
+
+more optimally, you can just use one list
+
+def f(nums):
+	prod = 1
+	f = []
+	for i in range(len(nums)):
+		f.append(prod)
+		prod = prod*nums[i]
+		#last element can be, should be skipped
+	prod = 1
+	for i in range(len(nums)-1, -1, -1):
+		f[i] = f[i]*prod
+		prod = prod*nums[i]
+
+	return f
