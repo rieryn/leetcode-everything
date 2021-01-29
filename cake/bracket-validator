@@ -1,0 +1,47 @@
+bracket-validator
+
+Let's say:
+
+'(', '{', '[' are called "openers."
+')', '}', ']' are called "closers."
+Write an efficient function that tells us whether or not an input string's openers and closers are properly nested.
+
+Examples:
+
+"{ [ ] ( ) }" should return True
+"{ [ ( ] ) }" should return False
+"{ [ }" should return False
+
+check for {,[, (
+
+track open braces for each type, 
+most recent open brace
+most recent closed brace should match type
+open braces should == total closed braces at end of string
+
+for i in brackets
+
+	if i = '{':
+		curly+=1
+		recent = '{'
+	if i = '[':
+		square+=1
+		recent = '['
+	if i = '(':
+		round+=1
+		recent = '('
+	if i = '}':
+		curly -=1
+		if recent != '{' or curly<0:
+			return false
+	if i = ']':
+		square -=1
+		if recent != '[' or square<0:
+			return false
+	if i = ')':
+		round -=1
+		if recent != '(' or round<0:
+			return false
+	if i == len(brackets)-1 and curly ==0 and square ==0 and round ==0:
+		return true
+	return false
