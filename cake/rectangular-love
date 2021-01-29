@@ -1,0 +1,19 @@
+rectangular-love
+
+Write a function to find the rectangular intersection of two given love rectangles.
+
+As with the example above, love rectangles are always "straight" and never "diagonal." More rigorously: each side is parallel with either the x-axis or the y-axis.
+love_rec = {
+
+    # Coordinates of bottom-left corner
+    'left_x'   : 1,
+    'bottom_y' : 1,
+
+    # Width and height
+    'width'    : 6,
+    'height'   : 3,
+}
+
+looking for x1-x2>0 and y1-y2>0, => width and height unless it's greater than x.right or y.top
+where x1,y1 is top right of one, x2,y2 is bottom left of the other
+bot left coordinates are x2,y2

@@ -1,0 +1,14 @@
+find-duplicate-files
+walk through file tree, hash binaries you haven't seen and compare binaries, make new tuples
+check created date for origiinal file
+
+checking ctime is system dependent, you could use getmtime
+getmtime> last path modification
+getctime>creation date OR last inode modification on unix 
+
+there's no way to get creation time on <ext4
+
+instead of hashing the whole contents of each file, we hashed three fixed-size "samples" from each file made of the first xx bytes, the middle xx bytes, and the last xx bytes
+block size depends on filesystem
+
+might return different files if you don't check the whole binary
