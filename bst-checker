@@ -1,0 +1,13 @@
+bst-checker
+
+Write a function to check that a binary tree is a valid binary search tree. 
+left<node<right sorted
+
+def f(node):
+	if node.left.value> node.value || node.right.value>node.value:
+		return false
+	b1 = f(node.left)
+	b2 = f(node.right)
+	if b1 ||b2 ==false:
+		return false
+	return true
