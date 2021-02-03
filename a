@@ -1,0 +1,52 @@
+
+Instructions
+
+Read the user story presented below, complete at least two of the three exercises, and follow the submission instructions to send us your work. All submissions should include an API design (Exercise #1) plus either a backend implementation (#2A) or frontend implementation (#2B).
+
+User Story
+
+Jane is working on a feature to save settings for a game, and would like these settings to be stored in the cloud so they can also be managed via a separate web interface. The game settings data will only consist of key/value pairs (KVPs), where keys can be arbitrary strings (within character set [a­z0­9.­]) and values can only be simple primitive types (string, number, boolean, and null). Additionally, she would like the ability to organize settings into logical groups (e.g. “difficulty”) and create variations of each group without having to duplicate data (e.g. “easy”, “hard”). For instance, a key of “maxEnemyCount” in the “difficulty” group would automatically be inherited by sub­groups “easy” and “hard”, and could be optionally overridden in each.
+
+Exercise #1 - API Design
+
+­Design a REST API that meets the design requirements of the user story. Give example request and responses for each route.
+
+­API spec should contain whatever features you feel are most important, but must at least have routes specified for the following functions:
+
+Create and list settings groups
+
+­Retrieve all KVPs for a settings group
+
+­Modify and delete individual KVPs
+
+Exercise #2A - Backend Implementation
+
+Implement a working RESTful HTTP backend for the API designed in Exercise #1
+
+Functionality should at least cover the minimum feature set specified in Exercise #1
+
+The API content format should be JSON
+
+The backend does not have to be hosted, but must work against calls from localhost.
+
+Exercise #2B - Frontend Implementation
+
+Implement a basic management website for your API that meets the design requirements of the user story.
+
+Hard­coded sample data is acceptable to demonstrate the website.
+
+Be prepared to discuss how your implementation facilitates iteration with a visual designer.
+
+General Guidelines
+
+Ruby, Javascript, and C# are the primary languages used on our current projects, but you are free to use whatever language you would like.
+
+Feel free to use any frameworks or libraries you like, as long as they are not restricted for commercial use.
+
+Include a README in your source code with at least the following:
+
+Your API spec, or a link to an external page with the spec (e.g. apiary.io)
+
+Instructions for launching and testing your API or website locally
+
+Any other notes you think would be helpful for us while evaluating your work 

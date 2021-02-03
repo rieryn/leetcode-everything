@@ -1,0 +1,25 @@
+find-unique-int-among-duplicates
+Given the list of IDs, which contains many duplicate integers and one unique integer, find the unique integer.
+
+naive: hash while iterating and check against hashmap, O(n)
+
+bitwise: xor the whole list for constant space
+xor removes dupes, and can be used for in place swapping like
+a ^= b -> (a* = a^ b, b* = b)
+b ^= a -> (a* = a^b, b*= b^a^b=a)
+a ^= b -> (a* = a^b^a = b, b* = a)
+can also be used to find a missing seq element if we know the seq,
+given seq a is like, ints in 1-n, seq b is ints in 1-n minus one element,
+a ^ b will return the missing element
+xor with multiple missing/unique elements will return something like:
+ a ^ b ^c
+we can extract the individual elements by 
+bitwise operators will work on any object, if the bits are actually identical, differs by language
+left shift to multiply, right shift to divide
+
+xor is commutative, and a ^ a = 0, a ^ b = b ^ a, so e.g. a^ c^ b^ c^ a^ ^b = a^a ^b ^b c^c =0
+
+v = 0
+for i in list:
+	v ^= i
+return v
