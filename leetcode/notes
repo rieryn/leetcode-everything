@@ -1,0 +1,7 @@
+Some of these problems use DP, based on some choice to make among a set of available choices.
+
+Brute force is, based on the choices you have, do exhaustive search on all possible choices and choose the best.
+
+Greedy is, based on the choices you have, we know exactly what is the optimal one. (Only applies to few problems, like Dkjistras)
+
+DP is brute force of making all possible choices, but finding an optimal substructure (recurisve equation that helps us to construct solutions for bigger instance based on solutions for smallers instances of the problem) and hence using cached results or building bottom up table.
