@@ -38,7 +38,7 @@ for day i with j jobs:
     etc.
 
 max difficulty is:
-    max of k to j jobs + day i-1 with k jobs
+    max of k to j jobs + res of day i-1 with k jobs
 
 then for day i with j jobs:
 min difficulty is:
