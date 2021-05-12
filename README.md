@@ -11,3 +11,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ```
 given a stream of data how do you choose packet size in realtime to minimize regret?
 ```
+```
+Leetcode that can be solved is not the eternal Leetcode.
+Leetcode that can be named is not the eternal Leetcode.
+Leetcode is the beginning of heaven and earth.
+Leetcode is the mother of ten thousand things.
+
+Leetcode, Leetcode, Leetcode.
+These three are your greatest treasures.
+Leetcode in actions and thoughts, 
+Leetcode with both friends and enemies
+```
